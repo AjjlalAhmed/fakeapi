@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  //@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  font-family: "Poppins", sans-serif;
+}
+.outer-container {
+  #hero {
+    min-height: 100vh;
+    background: url("../images/pexels-markus-spiske-1089440.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 100vh 100vw rgba(0, 0, 0, 0.8);
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 10%;
+      background: rgba(0, 0, 0, 0.3);
+      .logo {
+        color: #fff;
+        text-transform: capitalize;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 28px;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        .nav-item {
+          padding: 10px 30px;
+          text-transform: capitalize;
+          font-size: 18px;
+          cursor: pointer;
+          .nav-link {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .showcase {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-height: 80vh;
+      .showcase-title {
+        color: #fff;
+        font-size: 4rem;
+        text-transform: capitalize;
+        font-weight: 400;
+        letter-spacing: 5px;
+        padding: 20px 10px;
+      }
+      .showcase-subtitle {
+        color: #fff;
+        padding: 20px 10px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+      .btn {
+        padding: 20px 10px;
+        .action-btn {
+          padding: 10px 60px;
+          border-radius: 3px;
+          border: 0px;
+          background: dodgerblue;
+          text-transform: capitalize;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: 0.5s linear;
+          color: #fff;
+          &:hover {
+            background: rgb(0, 127, 253);
+          }
+        }
+      }
+    }
+  }
+  #try-it {
+    padding: 100px 10%;
+    background: #fff;
+    h1 {
+      font-size: 2rem;
+      text-transform: capitalize;
+      padding-bottom: 20px;
+      font-weight: 400;
+      color: dodgerblue;
+    }
+    pre {
+      padding: 10px 0px;
+      code {
+        border: 0;
+        border-radius: 3px;
+        padding: 20px;
+        min-height: 100px;
+        font-size: 1rem;
+        line-height: 1.8rem;
+        letter-spacing: 1px;
+      }
+    }
+    .btn {
+      padding: 10px 0px;
+      .try-btn {
+        padding: 10px 30px;
+        background: dodgerblue;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        border: 0px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px #2222;
+        cursor: pointer;
+        transition: 0.5s linear;
+        color: #fff;
+        &:hover {
+          background: rgb(0, 127, 253);
+        }
+      }
+    }
+  }
+  #doc {
+    padding: 50px 10%;
+    background: #f1f1f1;
+    margin-top: 100px;
+    h1 {
+      font-size: 2rem;
+      text-transform: capitalize;
+      padding: 10px 0px;
+      font-weight: 400;
+      color: dodgerblue;
+    }
+    p {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 10px 0px;
+      line-height: 1.8rem;
+    }
+    .resources {
+      margin-top: 50px;
+      p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        padding: 10px 0px;
+        line-height: 1.8rem;
+      }
+      ul {
+        list-style: none;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #2222;
+          padding:5px;
+          margin: 10px 0px;
+          border-radius: 3px;
+          span {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 10px 0px;
+            line-height: 1.8rem;
+          }
+        }
+      }
+    }
+    .routes {
+      margin-top: 50px;
+      h2{
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        padding: 10px 0px;
+        line-height: 1.8rem;
+      }
+      ul {
+        list-style: none;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #2222;
+          padding:5px;
+          margin: 10px 0px;
+          border-radius: 3px;
+          span {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 10px 0px;
+            line-height: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+  #footer{
+    footer{
+      padding:20px 10px;
+      text-align: center;
+      background: dodgerblue;
+      p{
+        color: #fff;
+        font-size: 1.1rem;
+        
+      }
+    }
+  }
+}
+@media only screen and(max-width:745px) {
+  .outer-container {
+    #hero {
+      nav {
+        justify-content: center;
+        .logo {
+          padding: 10px;
+          padding-bottom: 20px;
+        }
+      }
+      .showcase {
+        .showcase-title {
+          font-size: 3rem;
+        }
+        .showcase-subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width:450px) {
+  .outer-container {
+    #hero {
+      nav {
+        justify-content: center;
+        padding: 10px;
+        .logo {
+          padding: 10px;
+          padding-bottom: 20px;
+        }
+        ul {
+          .nav-item {
+            font-size: 15px;
+            padding: 10px 20px;
+          }
+        }
+      }
+      .showcase {
+        .showcase-title {
+          font-size: 2.5rem;
+        }
+        .showcase-subtitle {
+          font-size: 0.9rem;
+          text-align: center;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width:550px) {
+  .outer-container {
+    #try-it{
+      padding: 100px 10px;
+    }
+    #doc{
+      padding: 50px 10px;
+    }
+  }
+}

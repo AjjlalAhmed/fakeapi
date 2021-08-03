@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs2015.min.css"
+    />
+
+    <title>Fake Api</title>
+  </head>
+  <body>
+    <div class="outer-container">
+      <section id="hero">
+        <nav>
+          <h1 class="logo">{ fakeApi }</h1>
+          <ul>
+            <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">docs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">routes</a></li>
+          </ul>
+        </nav>
+        <div class="showcase">
+          <h1 class="showcase-title">{ fakeApi }</h1>
+          <p class="showcase-subtitle">
+            Fake Online REST API for Testing and Prototyping
+          </p>
+          <div class="btn">
+            <button class="action-btn">try it</button>
+          </div>
+        </div>
+      </section>
+      <section id="try-it">
+        <h1>how it works</h1>
+        <div class="try-it__content">
+          <pre><code >fetch('https://jsonplaceholder.cypress.io/todos/1')
+            .then(response => response.json())
+            .then(json => console.log(json))</code></pre>
+          <div class="btn">
+            <button class="try-btn">try it</button>
+          </div>
+          <pre><code id="result" class="language-json"></code></pre>
+        </div>
+      </section>
+      <section id="doc">
+        <h1 class="doc-title">how to use it</h1>
+        <p class="doc-description">
+          FakeApi can be used to fetch JsonData for your website. you can use
+          examples below to check how fakeApi works and feel free to enjoy it in
+          your awesome projects!
+        </p>
+        <section class="resources">
+          <h1>resources</h1>
+          <p>FakeApi comes with a set of 3 common resources:</p>
+          <ul>
+            <li>
+              <span>/posts</span> <span class="colored-span">100 posts</span>
+            </li>
+            <li>
+              <span>/comments</span>
+              <span class="colored-span">500 comments</span>
+            </li>
+            <li>
+              <span>/todos</span> <span class="colored-span">200 todos</span>
+            </li>
+          </ul>
+          <p>You can add additional query</p>
+          <ul>
+            <li><span>userId</span> <span>todos & posts</span></li>
+            <li><span>postId</span> <span>comments</span></li>
+            <li><span>limit</span> <span>1 to 100</span></li>
+          </ul>
+        </section>
+        <section class="routes">
+          <h1>routes</h1>
+          <h2>Base Data URL</h2>
+          <p>https://dummyapi.io/data/api/</p>
+          <p>All HTTP methods are supported</p>
+          <ul>
+            <li><span>GET</span> <span class="colored-span">/todos</span></li>
+            <li>
+              <span>POST</span>
+              <span class="colored-span">/todos</span>
+            </li>
+            <li><span>PUT</span> <span class="colored-span">/todos</span></li>
+            <li><span>PATCH</span> <span class="colored-span">/todos</span></li>
+            <li>
+              <span>DELETE</span> <span class="colored-span">/todos</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="footer">
+        <footer><p>Made with ♥ by Ajjlal Ahmed</p></footer>
+      </section>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script>
+    const tryBtn = document.querySelector(".try-btn");
+    tryBtn.addEventListener("click", () => {
+      fetch("/api/comments")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.data[0]);
+          document.querySelector("#result").innerHTML = JSON.stringify(
+            data.data[0]
+          );
+          hljs.highlightAll();
+        });
+    });
+  </script>
+</html>
