@@ -28,7 +28,7 @@ app.use("/api/", getRoutes);
 app.use("/api/", postRoutes);
 
 // Creating port
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 // Listening to port
 app.listen(port, () => {
