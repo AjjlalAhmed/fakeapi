@@ -1,8 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  //@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 .outer-container {
   #hero {
@@ -17,7 +18,7 @@
       align-items: center;
       flex-wrap: wrap;
       padding: 15px 10%;
-      background: rgba(0, 0, 0, 0.3);
+      background: transparent;
       .logo {
         color: #fff;
         text-transform: capitalize;
@@ -51,7 +52,7 @@
         color: #fff;
         font-size: 4rem;
         text-transform: capitalize;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: 5px;
         padding: 20px 10px;
       }
@@ -64,18 +65,20 @@
       .btn {
         padding: 20px 10px;
         .action-btn {
+          text-decoration: none;
           padding: 10px 60px;
           border-radius: 3px;
           border: 0px;
-          background: dodgerblue;
+          background: #ffea00;
           text-transform: capitalize;
           font-size: 1.2rem;
           letter-spacing: 1px;
           cursor: pointer;
           transition: 0.5s linear;
-          color: #fff;
+          color: #1e1e1e;
+          font-weight: 700;
           &:hover {
-            background: rgb(0, 127, 253);
+            background: #f8e940;
           }
         }
       }
@@ -88,8 +91,8 @@
       font-size: 2rem;
       text-transform: capitalize;
       padding-bottom: 20px;
-      font-weight: 400;
-      color: dodgerblue;
+      font-weight: 700;
+      color: #1e1e1e;
     }
     pre {
       padding: 10px 0px;
@@ -106,18 +109,19 @@
     .btn {
       padding: 10px 0px;
       .try-btn {
-        padding: 10px 30px;
-        background: dodgerblue;
+        padding: 5px 30px;
+        background: #ffea00;
         text-transform: capitalize;
         font-size: 1.2rem;
         border: 0px;
         border-radius: 3px;
-        box-shadow: 2px 2px 5px #2222;
+        border: 1px solid #2222;
         cursor: pointer;
         transition: 0.5s linear;
-        color: #fff;
+        color: #1e1e1e;
+        font-weight: 700;
         &:hover {
-          background: rgb(0, 127, 253);
+          background: #f8e940;
         }
       }
     }
@@ -130,8 +134,8 @@
       font-size: 2rem;
       text-transform: capitalize;
       padding: 10px 0px;
-      font-weight: 400;
-      color: dodgerblue;
+      font-weight: 700;
+      color: #1e1e1e;
     }
     p {
       font-size: 1rem;
@@ -154,14 +158,16 @@
           justify-content: space-between;
           align-items: center;
           border: 1px solid #2222;
-          padding:5px;
-          margin: 10px 0px;
-          border-radius: 3px;
+          padding:5px 10px;
+          margin: 15px 0px;
+          border-radius: 5px;
+          background: #ffea00;
           span {
             font-size: 1rem;
             letter-spacing: 1px;
             padding: 10px 0px;
             line-height: 1.8rem;
+            font-weight: 700;
           }
         }
       }
@@ -170,6 +176,7 @@
       margin-top: 50px;
       h2{
         font-size: 1.2rem;
+        font-weight: 400;
       }
       p {
         font-size: 1rem;
@@ -184,14 +191,16 @@
           justify-content: space-between;
           align-items: center;
           border: 1px solid #2222;
-          padding:5px;
-          margin: 10px 0px;
-          border-radius: 3px;
+          padding:5px 20px;
+          margin: 15px 0px;
+          border-radius: 5px;
+          background: #ffea00;
           span {
             font-size: 1rem;
             letter-spacing: 1px;
             padding: 10px 0px;
             line-height: 1.8rem;
+            font-weight: 700;
           }
         }
       }
@@ -201,10 +210,11 @@
     footer{
       padding:20px 10px;
       text-align: center;
-      background: dodgerblue;
+      background: #1e1e1e;
       p{
         color: #fff;
         font-size: 1.1rem;
+        font-weight: 400;
         
       }
     }

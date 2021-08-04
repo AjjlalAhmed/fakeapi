@@ -18,9 +18,16 @@
         <nav>
           <h1 class="logo">{ fakeApi }</h1>
           <ul>
-            <li class="nav-item"><a class="nav-link" href="#">home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">docs</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">routes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hero">home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#doc">docs</a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="blank"
+                href="https://github.com/AjjlalAhmed"
+                >github</a
+              >
+            </li>
           </ul>
         </nav>
         <div class="showcase">
@@ -29,14 +36,14 @@
             Fake Online REST API for Testing and Prototyping
           </p>
           <div class="btn">
-            <button class="action-btn">try it</button>
+            <a href="#try-it" class="action-btn">try it</a>
           </div>
         </div>
       </section>
       <section id="try-it">
         <h1>how it works</h1>
         <div class="try-it__content">
-          <pre><code >fetch('https://jsonplaceholder.cypress.io/todos/1')
+          <pre><code >fetch('https://jfakeapi.herokuapp.com/api/comments?limit=1')
             .then(response => response.json())
             .then(json => console.log(json))</code></pre>
           <div class="btn">
@@ -77,7 +84,7 @@
         <section class="routes">
           <h1>routes</h1>
           <h2>Base Data URL</h2>
-          <p>https://dummyapi.io/data/api/</p>
+          <p>https://jfakeapi.herokuapp.com/api/</p>
           <p>All HTTP methods are supported</p>
           <ul>
             <li><span>GET</span> <span class="colored-span">/todos</span></li>
@@ -106,15 +113,14 @@
   <script>
     const tryBtn = document.querySelector(".try-btn");
     tryBtn.addEventListener("click", () => {
-      fetch("/api/comments")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data.data[0]);
-          document.querySelector("#result").innerHTML = JSON.stringify(
-            data.data[0]
-          );
-          hljs.highlightAll();
-        });
+      document.querySelector("#result").innerHTML = `{
+        "postId":1,
+        "id":1,
+        "name":"id labore ex et quam laborum",
+        "email":"Eliseo@gardner.biz",
+        "body":"laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"
+        }`;
+      hljs.highlightAll();
     });
   </script>
 </html>
